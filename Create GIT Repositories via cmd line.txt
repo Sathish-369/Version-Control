@@ -1,0 +1,62 @@
+How to create and delete git repo in Ubuntu local.
+
+# We can launch ubuntu with the default git installation. Otherwise, please use the following command 
+
+app-get install git
+
+# Then Switch to root user.
+
+sudo -i
+
+# create repo.
+
+ git init example_repo
+
+# Verfiy created the repo.
+
+ls 
+
+ls -a
+
+# How to delete the repo.
+
+rm -rf repo-name
+
+# How to create users in Git.
+
+config --global user.name "usernareme"
+
+config --global user.email "useremail"
+
+# How to verify the created users.
+
+git config --list
+
+
+
+
+Example steps:
+
+root@ip-172-00-00-00:~# git init sat
+
+Initialized empty Git repository in /root/sat/.git/
+
+root@ip-172-00-00-00:~# ls -a
+
+.  ..  .bashrc  .gitconfig  .profile  .ssh  sat  snap
+
+root@ip-172-00-00-00:~# rm -rf sat/
+
+root@ip-172-00-00-00:~# ls -a
+
+.  ..  .bashrc  .gitconfig  .profile  .ssh  snap
+
+root@ip-172-00-00-00:~# git config --global user.name "example"
+
+root@ip-172-00-00-00:~# git config --global user.email "example@com"
+
+root@ip-172-00-00-00:~# git config --list
+
+user.name=example
+
+user.email=example@com
